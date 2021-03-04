@@ -13,7 +13,7 @@ class Receipt
 	 *
 	 * @return float|int
 	 */
-	public function total(array $items, float|int|null $coupon): float|int
+	public function subtotal(array $items, float|int|null $coupon): float|int
 	{
 		if ($coupon > 1.00) {
 			throw new BadMethodCallException('Coupon must be less than or equal to 1.00');
@@ -28,26 +28,24 @@ class Receipt
 
 	/**
 	 * @param float|int $amount
-	 * @param float|int $tax
 	 *
 	 * @return float|int
 	 */
-	public function tax(float|int $amount, float|int $tax): float|int
+	public function tax(float|int $amount): float|int
 	{
-		return ($amount * $tax);
+		return ($amount * $this->tax);
 	}
 
 	/**
 	 * @param array          $items
-	 * @param float|int      $tax
 	 * @param float|int|null $coupon
 	 *
 	 * @return float|int
 	 */
-	public function postTaxTotal(array $items, float|int $tax, float|int|null $coupon): float|int
+	public function postTaxTotal(array $items, float|int|null $coupon): float|int
 	{
-		$subtotal = $this->total($items, $coupon);
-		return $subtotal + $this->tax($subtotal, $tax);
+		$subtotal = $this->subtotal($items, $coupon);
+		return $subtotal + $this->tax($subtotal);
 	}
 
 	/**
