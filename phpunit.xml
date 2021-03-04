@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" colors="true" processIsolation="false" stopOnFailure="false" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+  <coverage processUncoveredFiles="true">
+    <include>
+      <directory suffix=".php">./src</directory>
+    </include>
+  </coverage>
+  <php>
+    <ini name="memory_limit" value="-1"/>
+    <ini name="apc.enable_cli" value="1"/>
+  </php>
+  <!-- Add any additional test suites you want to run here -->
+  <testsuites>
+    <testsuite name="app">
+      <directory>./tests</directory>
+    </testsuite>
+    <testsuite name="receipt">
+      <directory>./tests</directory>
+      <exclude>./tests/ReceiptItems.php</exclude>
+    </testsuite>
+  </testsuites>
+  <!--
+    <logging>
+        <log
+            type="coverage-html"
+            target="./tmp/coverage/html/"
+            charset="UTF-8"
+            highlight="true"
+            lowUpperBound="60"
+            highLowerBound="90"
+        />
+        <log
+            type="coverage-clover"
+            target="./tmp/coverage/clover.xml"
+        />
+    </logging>
+    -->
+</phpunit>
