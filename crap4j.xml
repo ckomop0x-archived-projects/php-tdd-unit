@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crap_result>
+  <project/>
+  <timestamp>2021-03-05 14:44:13</timestamp>
+  <stats>
+    <name>Method Crap Stats</name>
+    <methodCount>8</methodCount>
+    <crapMethodCount>0</crapMethodCount>
+    <crapLoad>0</crapLoad>
+    <totalCrap>10</totalCrap>
+    <crapMethodPercent>0</crapMethodPercent>
+  </stats>
+  <methods>
+    <method>
+      <package>TDD</package>
+      <className>TDD\Formatter</className>
+      <methodName>currencyAmount</methodName>
+      <methodSignature>currencyAmount(int|float $input): float</methodSignature>
+      <fullMethod>currencyAmount(int|float $input): float</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>TDD</package>
+      <className>TDD\ItemsTable</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(PDO $pdo)</methodSignature>
+      <fullMethod>__construct(PDO $pdo)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>TDD</package>
+      <className>TDD\ItemsTable</className>
+      <methodName>__destruct</methodName>
+      <methodSignature>__destruct()</methodSignature>
+      <fullMethod>__destruct()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>TDD</package>
+      <className>TDD\ItemsTable</className>
+      <methodName>findForId</methodName>
+      <methodSignature>findForId($id)</methodSignature>
+      <fullMethod>findForId($id)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>TDD</package>
+      <className>TDD\Receipt</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct($formatter)</methodSignature>
+      <fullMethod>__construct($formatter)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>TDD</package>
+      <className>TDD\Receipt</className>
+      <methodName>subtotal</methodName>
+      <methodSignature>subtotal(array $items, float|int|null $coupon): float|int</methodSignature>
+      <fullMethod>subtotal(array $items, float|int|null $coupon): float|int</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>TDD</package>
+      <className>TDD\Receipt</className>
+      <methodName>tax</methodName>
+      <methodSignature>tax(float|int $amount): float|int</methodSignature>
+      <fullMethod>tax(float|int $amount): float|int</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>TDD</package>
+      <className>TDD\Receipt</className>
+      <methodName>postTaxTotal</methodName>
+      <methodSignature>postTaxTotal(array $items, float|int|null $coupon): float|int</methodSignature>
+      <fullMethod>postTaxTotal(array $items, float|int|null $coupon): float|int</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+  </methods>
+</crap_result>

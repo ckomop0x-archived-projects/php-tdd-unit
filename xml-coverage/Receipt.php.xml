@@ -1,0 +1,432 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="Receipt.php" path="/">
+    <totals>
+      <lines total="55" comments="17" code="38" executable="11" executed="11" percent="100.00"/>
+      <methods count="4" tested="4" percent="100.00"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="1" tested="1" percent="100.00"/>
+      <traits count="0" tested="0" percent="0"/>
+    </totals>
+    <class name="TDD\Receipt" start="8" executable="11" executed="11" crap="6">
+      <namespace name="TDD"/>
+      <method name="__construct" signature="__construct($formatter)" start="10" end="13" crap="1" executable="2" executed="2" coverage="100"/>
+      <method name="subtotal" signature="subtotal(array $items, float|int|null $coupon): float|int" start="21" end="32" crap="3" executable="6" executed="6" coverage="100"/>
+      <method name="tax" signature="tax(float|int $amount): float|int" start="39" end="42" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="postTaxTotal" signature="postTaxTotal(array $items, float|int|null $coupon): float|int" start="50" end="54" crap="1" executable="2" executed="2" coverage="100"/>
+    </class>
+    <coverage>
+      <line nr="12">
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #0"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #1"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #2"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotalAndCoupon"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotalException"/>
+        <covered by="TDD\Test\ReceiptTest::testPostTaxTotal"/>
+        <covered by="TDD\Test\ReceiptTest::testTax"/>
+      </line>
+      <line nr="13">
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #0"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #1"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #2"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotalAndCoupon"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotalException"/>
+        <covered by="TDD\Test\ReceiptTest::testPostTaxTotal"/>
+        <covered by="TDD\Test\ReceiptTest::testTax"/>
+      </line>
+      <line nr="23">
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #0"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #1"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #2"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotalAndCoupon"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotalException"/>
+      </line>
+      <line nr="24">
+        <covered by="TDD\Test\ReceiptTest::testSubtotalException"/>
+      </line>
+      <line nr="26">
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #0"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #1"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #2"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotalAndCoupon"/>
+      </line>
+      <line nr="27">
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #0"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #1"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #2"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotalAndCoupon"/>
+      </line>
+      <line nr="28">
+        <covered by="TDD\Test\ReceiptTest::testSubtotalAndCoupon"/>
+      </line>
+      <line nr="31">
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #0"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #1"/>
+        <covered by="TDD\Test\ReceiptTest::testSubtotal with data set #2"/>
+      </line>
+      <line nr="41">
+        <covered by="TDD\Test\ReceiptTest::testTax"/>
+      </line>
+      <line nr="52">
+        <covered by="TDD\Test\ReceiptTest::testPostTaxTotal"/>
+      </line>
+      <line nr="53">
+        <covered by="TDD\Test\ReceiptTest::testPostTaxTotal"/>
+      </line>
+    </coverage>
+    <source>
+      <line no="1">
+        <token name="T_OPEN_TAG">&lt;?php</token>
+      </line>
+      <line no="2"/>
+      <line no="3"/>
+      <line no="4">
+        <token name="T_NAMESPACE">namespace</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">TDD</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="5"/>
+      <line no="6">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NAME_FULLY_QUALIFIED">\BadMethodCallException</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="7"/>
+      <line no="8">
+        <token name="T_CLASS">class</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Receipt</token>
+      </line>
+      <line no="9">
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="10">
+        <token name="T_WHITESPACE">	</token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">__construct</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$formatter</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="11">
+        <token name="T_WHITESPACE">	</token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="12">
+        <token name="T_WHITESPACE">		</token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">Formatter</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$formatter</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="13">
+        <token name="T_WHITESPACE">	</token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="14"/>
+      <line no="15">
+        <token name="T_WHITESPACE">	</token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="16">
+        <token name="T_DOC_COMMENT">	 * @param int[]          $items</token>
+      </line>
+      <line no="17">
+        <token name="T_DOC_COMMENT">	 * @param float|int|null $coupon</token>
+      </line>
+      <line no="18">
+        <token name="T_DOC_COMMENT">	 *</token>
+      </line>
+      <line no="19">
+        <token name="T_DOC_COMMENT">	 * @return float|int</token>
+      </line>
+      <line no="20">
+        <token name="T_DOC_COMMENT">	 */</token>
+      </line>
+      <line no="21">
+        <token name="T_WHITESPACE">	</token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">subtotal</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_ARRAY">array</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$items</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">float</token>
+        <token name="T_PIPE">|</token>
+        <token name="T_STRING">int</token>
+        <token name="T_PIPE">|</token>
+        <token name="T_STRING">null</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$coupon</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">float</token>
+        <token name="T_PIPE">|</token>
+        <token name="T_STRING">int</token>
+      </line>
+      <line no="22">
+        <token name="T_WHITESPACE">	</token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="23">
+        <token name="T_WHITESPACE">		</token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$coupon</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_GT">&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DNUMBER">1.00</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="24">
+        <token name="T_WHITESPACE">			</token>
+        <token name="T_THROW">throw</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NEW">new</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">BadMethodCallException</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'Coupon must be less than or equal to 1.00'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="25">
+        <token name="T_WHITESPACE">		</token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="26">
+        <token name="T_WHITESPACE">		</token>
+        <token name="T_VARIABLE">$sum</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">array_sum</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$items</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="27">
+        <token name="T_WHITESPACE">		</token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_EXCLAMATION_MARK">!</token>
+        <token name="T_STRING">is_null</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$coupon</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="28">
+        <token name="T_WHITESPACE">			</token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$sum</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_MINUS">-</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$sum</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_MULT">*</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$coupon</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="29">
+        <token name="T_WHITESPACE">		</token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="30"/>
+      <line no="31">
+        <token name="T_WHITESPACE">		</token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$sum</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="32">
+        <token name="T_WHITESPACE">	</token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="33"/>
+      <line no="34">
+        <token name="T_WHITESPACE">	</token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="35">
+        <token name="T_DOC_COMMENT">	 * @param float|int $amount</token>
+      </line>
+      <line no="36">
+        <token name="T_DOC_COMMENT">	 *</token>
+      </line>
+      <line no="37">
+        <token name="T_DOC_COMMENT">	 * @return float|int</token>
+      </line>
+      <line no="38">
+        <token name="T_DOC_COMMENT">	 */</token>
+      </line>
+      <line no="39">
+        <token name="T_WHITESPACE">	</token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">tax</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">float</token>
+        <token name="T_PIPE">|</token>
+        <token name="T_STRING">int</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$amount</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">float</token>
+        <token name="T_PIPE">|</token>
+        <token name="T_STRING">int</token>
+      </line>
+      <line no="40">
+        <token name="T_WHITESPACE">	</token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="41">
+        <token name="T_WHITESPACE">		</token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">Formatter</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">currencyAmount</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$amount</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_MULT">*</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">tax</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="42">
+        <token name="T_WHITESPACE">	</token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="43"/>
+      <line no="44">
+        <token name="T_WHITESPACE">	</token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="45">
+        <token name="T_DOC_COMMENT">	 * @param array          $items</token>
+      </line>
+      <line no="46">
+        <token name="T_DOC_COMMENT">	 * @param float|int|null $coupon</token>
+      </line>
+      <line no="47">
+        <token name="T_DOC_COMMENT">	 *</token>
+      </line>
+      <line no="48">
+        <token name="T_DOC_COMMENT">	 * @return float|int</token>
+      </line>
+      <line no="49">
+        <token name="T_DOC_COMMENT">	 */</token>
+      </line>
+      <line no="50">
+        <token name="T_WHITESPACE">	</token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">postTaxTotal</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_ARRAY">array</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$items</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">float</token>
+        <token name="T_PIPE">|</token>
+        <token name="T_STRING">int</token>
+        <token name="T_PIPE">|</token>
+        <token name="T_STRING">null</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$coupon</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">float</token>
+        <token name="T_PIPE">|</token>
+        <token name="T_STRING">int</token>
+      </line>
+      <line no="51">
+        <token name="T_WHITESPACE">	</token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="52">
+        <token name="T_WHITESPACE">		</token>
+        <token name="T_VARIABLE">$subtotal</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">subtotal</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$items</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$coupon</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="53">
+        <token name="T_WHITESPACE">		</token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$subtotal</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_PLUS">+</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">tax</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$subtotal</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="54">
+        <token name="T_WHITESPACE">	</token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="55">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="56"/>
+    </source>
+  </file>
+</phpunit>

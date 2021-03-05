@@ -17,7 +17,17 @@ class ReceiptTest extends TestCase
 
 	public function setUp(): void
 	{
-		$this->Receipt = new Receipt();
+		$this->Formatter = $this
+			->getMockBuilder('TDD\Formatter')
+			->setMethods(['currencyAmount'])
+			->getMock();
+		$this
+			->Formatter
+			->expects($this->any())
+			->method('currencyAmount')
+			->with($this->anything())
+			->will($this->returnArgument(0));
+		$this->Receipt = new Receipt($this->Formatter);
 	}
 
 	public function tearDown(): void
@@ -79,6 +89,7 @@ class ReceiptTest extends TestCase
 		$Receipt = $this
 			->getMockBuilder('TDD\Receipt')
 			->setMethods(['tax', 'subtotal'])
+			->setConstructorArgs([$this->Formatter])
 			->getMock();
 		$Receipt
 			->expects($this->once())
@@ -105,31 +116,5 @@ class ReceiptTest extends TestCase
 			$output,
 			'The tax calculation should equal 1.00'
 		);
-	}
-
-	/**
-	 * @param $input
-	 * @param $expected
-	 * @param $msg
-	 *
-	 * @dataProvider provideCurrencyAmount
-	 */
-	public function testCurrencyAmount($input, $expected, $msg): void
-	{
-		$this->assertSame(
-			$expected,
-			$this->Receipt->currencyAmount($input),
-			$msg
-		);
-	}
-
-	public function provideCurrencyAmount()
-	{
-		return [
-			[1, 1.00, '1 should be transformed into 1.00'],
-			[1.1, 1.10, '1.1 should be transformed into 1.10'],
-			[1.11, 1.11, '1.11 should stay as 1.11'],
-			[1.111, 1.11, '1.111 should be transformed into 1.11'],
-		];
 	}
 }

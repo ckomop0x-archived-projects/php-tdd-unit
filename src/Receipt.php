@@ -7,6 +7,11 @@ use \BadMethodCallException;
 
 class Receipt
 {
+	public function __construct($formatter)
+	{
+		$this->Formatter = $formatter;
+	}
+
 	/**
 	 * @param int[]          $items
 	 * @param float|int|null $coupon
@@ -33,7 +38,7 @@ class Receipt
 	 */
 	public function tax(float|int $amount): float|int
 	{
-		return ($amount * $this->tax);
+		return $this->Formatter->currencyAmount($amount * $this->tax);
 	}
 
 	/**
@@ -46,15 +51,5 @@ class Receipt
 	{
 		$subtotal = $this->subtotal($items, $coupon);
 		return $subtotal + $this->tax($subtotal);
-	}
-
-	/**
-	 * @param int|float $input
-	 *
-	 * @return float
-	 */
-	public function currencyAmount(int|float $input): float
-	{
-		return round($input, 2);
 	}
 }
